@@ -10,11 +10,11 @@
 	{
 		1
 		{
-			"name"		"kf_maxkills"
-			"text"		"Max kills"
-			"help"		"The maxiumum number of kills before a map change"
+			"name"		"kf_timelimit"
+			"text"		"Time Limit"
+			"help"		"The Time limit In seconds before a map change"
 			"type"		"Numeric"
-			"default"	"20"
+			"default"	"620"
 		}
 	}
 
