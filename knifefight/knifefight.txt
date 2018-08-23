@@ -12,7 +12,7 @@
 		{
 			"name"		"kf_timelimit"
 			"text"		"Time Limit"
-			"help"		"The Time limit In seconds before a map change"
+			"help"		"The Time limit In seconds before a map change (NOT WORKING)"
 			"type"		"Numeric"
 			"default"	"620"
 		}
