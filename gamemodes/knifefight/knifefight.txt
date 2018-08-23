@@ -1,0 +1,32 @@
+"knifefight"
+{
+	"base"		"base"
+	"title"		"Knife Fight"
+	"maps"		"^kf_"
+	"menusystem"	"1"
+	"workshopid"	""
+
+	"settings"
+	{
+		1
+		{
+			"name"		"kf_maxkills"
+			"text"		"Max kills"
+			"help"		"The maxiumum number of kills before a map change"
+			"type"		"Numeric"
+			"default"	"20"
+		}
+
+
+		2
+		{
+			"name"		"kf_grenades"
+			"text"		"Allow Grenades"
+			"help"		"If enabled then grenades are enabled"
+			"type"		"CheckBox"
+			"default"	"0"
+		}
+
+	}
+
+}

@@ -1,0 +1,11 @@
+{
+	"title"		:	"Knife Fight",
+	"type"		:	"gamemode",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
