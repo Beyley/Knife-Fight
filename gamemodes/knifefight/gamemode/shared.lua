@@ -15,7 +15,6 @@ function GM:Initialize()
 end
 
 function GM:Tick()
-	//RunConsoleCommand( "give", table.Random(knifes) )
 if os.time() >= endTime then
 	game.ConsoleCommand("changelevel " ..table.Random(maps).. "\n")
 end
