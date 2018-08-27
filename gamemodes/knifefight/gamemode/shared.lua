@@ -27,17 +27,6 @@ end
 	ply:SetNWString("unique_id", unique_id)
 	ply:SetNWInt("kills", kills)
 end
- 
-function saveStat ( ply )
-	kills=ply:GetNWInt("killcounter")
-	print(ply:GetNWInt("killcounter"))
-	print(kills)
-	unique_id = ply:GetNWString ("SteamID")
-	print(unique_id)
-	print(ply:GetNWString ("SteamID"))
-	sql.Query("UPDATE player_info SET kills = "..kills.." WHERE unique_id = "..unique_id.."")
-	print("Stats updated !")
-end
 
 function tables_exist()
  
@@ -126,3 +115,18 @@ function KillCounter( victim, weapon, killer )  --Sets up a new function called 
     end
 
 hook.Add("PlayerDeath","KillCounter", KillCounter)
+
+function GM:PlayerSwitchFlashlight(ply, SwitchOn)
+	return true
+end
+
+function saveStat ( ply )
+	kills=ply:GetNWInt("killcounter")
+	print(ply:GetNWInt("killcounter"))
+	print(kills)
+	unique_id = ply:GetNWString ("SteamID")
+	print(unique_id)
+	print(ply:GetNWString ("SteamID"))
+	sql.Query("UPDATE player_info SET kills = "..kills.." WHERE unique_id = "..unique_id.."")
+	print("Stats updated !")
+end
