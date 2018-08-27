@@ -23,7 +23,6 @@ end
     function sql_value_stats ( ply )
 	unique_id = sql.QueryValue("SELECT unique_id FROM player_info WHERE unique_id = '"..steamID.."'")
 	kills = sql.QueryValue("SELECT kills FROM player_info WHERE unique_id = '"..steamID.."'")
-	gitkills = sql.QueryValue("SELECT kills FROM player_info WHERE unique_id = '"..steamID.."'")
 	ply:SetNWString("unique_id", unique_id)
 	ply:SetNWInt("kills", kills)
 end
@@ -90,9 +89,9 @@ hook.Add( "PlayerInitialSpawn", "PlayerInitialSpawn", PlayerInitialSpawn )
 hook.Add( "Initialize", "Initialize", Initialize )
 
 function KillCounter( victim, weapon, killer )  --Sets up a new function called KillCounter
-	            	if result~=nul then
+	            	if not result==NULL then
             		if isloaddone==0 then
-            killer:SetNWInt("killcounter", killer:GetNWInt("killcounter") + gitkills)
+            killer:SetNWInt("killcounter", killer:GetNWInt("killcounter") + kills)
             print(isloaddone)
             isloaddone = 1
             print(isloaddone)
@@ -111,7 +110,7 @@ function KillCounter( victim, weapon, killer )  --Sets up a new function called 
 
         
         end
-
+	kills=victim:GetNWInt("killcounter")
     end
 
 hook.Add("PlayerDeath","KillCounter", KillCounter)
@@ -121,12 +120,10 @@ function GM:PlayerSwitchFlashlight(ply, SwitchOn)
 end
 
 function saveStat ( ply )
-	kills=ply:GetNWInt("killcounter")
-	print(ply:GetNWInt("killcounter"))
 	print(kills)
 	unique_id = ply:GetNWString ("SteamID")
 	print(unique_id)
 	print(ply:GetNWString ("SteamID"))
-	sql.Query("UPDATE player_info SET kills = "..kills.." WHERE unique_id = "..unique_id.."")
+	sql.Query("UPDATE player_info SET kills = "..kills.." WHERE unique_id = '"..unique_id.."'")
 	print("Stats updated !")
 end
