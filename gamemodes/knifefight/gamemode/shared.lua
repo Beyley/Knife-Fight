@@ -33,7 +33,7 @@ function tables_exist()
 		Msg("The table already exists!")
 	else
 		if (!sql.TableExists("player_info")) then
-			query = "CREATE TABLE player_info ( unique_id varchar(255), kills int, deaths int )"
+			query = "CREATE TABLE player_info ( unique_id varchar(255), kills int )"
 			result = sql.Query(query)
 			if (sql.TableExists("player_info")) then
 				Msg("Success ! table 1 created \n")
