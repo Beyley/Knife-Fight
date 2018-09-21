@@ -7,7 +7,7 @@ models = {"models/player/kleiner.mdl", "models/player/police.mdl", "models/playe
 maps = {"gm_construct", "gm_flatgrass"}
 knifes = {"csgo_flip", "csgo_default_knife", "csgo_bayonet", "csgo_default_t", "csgo_bowie"}
 startTime = os.time()
-endTime = startTime+3000
+endTime = startTime+3600
 currentMap = game.GetMap()
 isloaddone = 0
 
