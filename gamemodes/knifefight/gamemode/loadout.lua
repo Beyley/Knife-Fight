@@ -4,14 +4,20 @@ function GM:PlayerLoadout( ply )
 	ply:Give( "csgo_flip" )
 	ply:Give( "csgo_default_t" )
 	ply:Give( "csgo_bayonet" )
-if ply:GetNWInt("killcounter") >= 150 then
-	ply:Give( "weapon_pistol" )
-end
-if ply:GetNWInt("killcounter") >= 200 then
-	ply:Give( "weapon_357" )
-end
 	-- Prevent default Loadout.
 	return true
 end
 
+
+
 hook.Add( "PlayerLoadout", "PlayerLoadout" )
+
+function playerSetSpeed(ply)
+
+timer.Simple(2, function()
+ 
+    GAMEMODE:SetPlayerSpeed(ply, 130, 250)
+end)
+end
+
+hook.Add( "PlayerSpawn", "playerSetSpeedtest", playerSetSpeed )
