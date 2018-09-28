@@ -1,7 +1,0 @@
-"knifefight"
-{
-	"base"		"base"
-	"title"		"Knife Fight"
-	"maps"		"^kf_"
-	"menusystem"	"1"
-	"workshopid"	"1489697925"
