@@ -8,13 +8,14 @@ models = {"models/player/kleiner.mdl", "models/player/police.mdl", "models/playe
 maps = {"gm_construct", "gm_flatgrass", "kf_spheres"}
 knifes = {"csgo_flip", "csgo_default_knife", "csgo_bayonet", "csgo_default_t", "csgo_bowie"}
 startTime = os.time()
-endTime = startTime+600
+timelimit = GetConVar("kf_timelimit"):GetInt()*60
 currentMap = game.GetMap()
 
 function GM:Initialize()
 end
 
 function GM:Tick()
+endTime = startTime+timelimit
 if os.time() >= endTime then
 	game.ConsoleCommand("changelevel " ..table.Random(maps).. "\n")
 end
