@@ -26,18 +26,7 @@
 			"type"		"CheckBox"
 			"default"	"0"
 		}
-
-
-
 		3
-		{
-			"name"		"kf_killrewards"
-			"text"		"Enable Kill Rewards"
-			"help"		"If enabled then kill rewards are enabled"
-			"type"		"CheckBox"
-			"default"	"0"
-		}
-		4
 		{
 			"name"		"kf_phys"
 			"text"		"Enable Physics Gun"
@@ -45,23 +34,7 @@
 			"type"		"CheckBox"
 			"default"	"0"
 		}
-		5
-		{
-			"name"		"kf_killrew1"
-			"text"		"Pistol Reward Value"
-			"help"		"Changes The Value Of The Kill Reward for The Pistol"
-			"type"		"Numeric"
-			"default"	"50"
-		}
-		6
-		{
-			"name"		"kf_killrew2"
-			"text"		"Revolver Reward Value"
-			"help"		"Changes The Value Of The Kill Reward for The Revolver"
-			"type"		"Numeric"
-			"default"	"75"
-		}
-		7
+		4
 		{
 			"name"		"kf_maxkills"
 			"text"		"Max Kills Before a map change"

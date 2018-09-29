@@ -29,23 +29,6 @@ end
 //Some hooks
 hook.Add( "PlayerInitialSpawn", "PlayerInitialSpawn", PlayerInitialSpawn )
 hook.Add( "Initialize", "Initialize", Initialize )
-//Killcounter Code
-function KillCounter( victim, weapon, killer )  --Sets up a new function called KillCounter
-        if killer:GetNWInt("killcounter") == maxkills then --If the killcounter variable equals 100000 then do something 
-            PrintMessage(HUD_PRINTTALK, "Player" .. killer:GetName() .. "Has Won")  --When the killcounter equals 50 it will print this "Player <playername> has won
-            timer.Simple(3, function()   --Sets up a timer for three seconds
-                game.ConsoleCommand("changelevel " ..table.Random(maps).. "\n") --When the timer finishes it excecutes this console command   
-            end)  
-        end
-            if killer~=victim then
-            killer:SetNWInt("killcounter", killer:GetNWInt("killcounter") + 1)
-
-        
-        end
-	kills=victim:GetNWInt("killcounter")
-    end
-
-hook.Add("PlayerDeath","KillCounter", KillCounter)
 
 function GM:PlayerSwitchFlashlight(ply, SwitchOn)
 	return true
