@@ -29,18 +29,10 @@
 		3
 		{
 			"name"		"kf_phys"
-			"text"		"Enable Physics Gun"
-			"help"		"If enabled then players will spawn with a physgun ONLY if grenades are enabled"
+			"text"		"Enable Gravity Gun"
+			"help"		"If enabled then players will spawn with a gravity gun ONLY if grenades are enabled"
 			"type"		"CheckBox"
 			"default"	"0"
-		}
-		4
-		{
-			"name"		"kf_maxkills"
-			"text"		"Max Kills Before a map change"
-			"help"		"Changes The Value Of The Max kills before a map change"
-			"type"		"Numeric"
-			"default"	"500"
 		}
 	}
 

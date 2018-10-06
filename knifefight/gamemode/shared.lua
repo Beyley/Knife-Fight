@@ -15,7 +15,6 @@ end
 //This function runs every tick
 function GM:Tick()
 timelimit = GetConVar("kf_timelimit"):GetInt()*60
-maxkills = GetConVar("kf_maxkills"):GetInt()
 endTime = startTime+timelimit //Constantly updates the time the game ends in realtime so you can change it on the fly
 timeleft = os.time()-endTime //Updates the lime left (NOT USED)
 if os.time() >= endTime then //Checks when to end the round
