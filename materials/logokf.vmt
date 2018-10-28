@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "logokf"
+	"$nocull" 1
+	"$nodecal" 1
+	"$nolod" 1
+}
