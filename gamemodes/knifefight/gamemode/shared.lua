@@ -1,7 +1,7 @@
 GM.Name = "Knife Fight"
-GM.Author = "Ep1c_M1n10n"
+GM.Author = "PoltixeTheDerg"
 GM.Email = "ep1cm1n10n123@gmail.com"
-GM.Website = "ep1cm1n10n.ddns.net"
+GM.Website = "poltixe.ddns.net"
 local models = {
 	"models/player/kleiner.mdl",
 	"models/player/police.mdl",
